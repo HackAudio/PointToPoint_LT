@@ -1,0 +1,61 @@
+/**
+ * Copyright (C) Hack Audio LLC - All Rights Reserved
+ *
+ * This source code is protected under international copyright law.  All rights
+ * reserved and protected by the copyright holders.
+ * This file is confidential and only available to authorized individuals with the
+ * permission of the copyright holders.  If you encounter this file and do not have
+ * permission, please contact the copyright holders and delete this file.
+ */
+
+//
+//  Circuit.h
+//
+//  Base classes for circuits in the "Point To Point LT" library
+//  Created by Eric Tarr on 2/13/22.
+//
+//
+
+#include "CircuitModel.h"
+
+#pragma once
+
+namespace PointToPoint_LT {
+
+//-------------------Don't change this base class ---------
+
+class Circuit
+{
+public:
+    
+    void process(const float * input, float * output, int numSamples, int channel)
+    {
+        circuit.process(input,output,numSamples,channel);
+    }
+    
+    void processInPlace(float* buffer, int numSamples, int channel)
+    {
+        circuit.processInPlace(buffer,numSamples,channel);
+    }
+    
+    float processSample(float x, int channel)
+    {
+        return circuit.processSample(x,channel);
+    }
+    
+    void prepare(double sampleRate, int bufferSize) {
+        circuit.prepare(sampleRate,bufferSize);
+    }
+    
+protected:
+    
+    CircuitModel::CircuitLayout layout;
+    
+    CircuitModel circuit {layout};
+};
+
+// End of namespace
+}
+
+
+
