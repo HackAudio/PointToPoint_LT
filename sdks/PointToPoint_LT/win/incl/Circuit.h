@@ -12,7 +12,7 @@
 
 namespace PointToPoint_LT {
 
-//-------------------Don't change this base class ---------
+//-------------------Don't change this base classes ---------
 
 class Circuit
 {

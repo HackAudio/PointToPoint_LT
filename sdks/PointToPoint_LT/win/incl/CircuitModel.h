@@ -12,6 +12,7 @@
 #pragma GCC visibility push(default)
 
 #include <vector>
+#include <memory>
 #include "CircuitElement.h"
 
 namespace PointToPoint_LT {
