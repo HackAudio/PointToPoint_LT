@@ -5,4 +5,4 @@
 
 */
 
-#include <juce_audio_plugin_client/juce_audio_plugin_client_RTAS_utils.mm>
+#include <juce_audio_processors/juce_audio_processors_lv2_libs.cpp>
